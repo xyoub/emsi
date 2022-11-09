@@ -1,12 +1,19 @@
-let button = document.getElementById('zz');
-button.addEventListener('click', bonjour);
+// let button = document.getElementById('zz');
+// button.addEventListener('click', bonjour);
 
-function bonjour() {
+// function bonjour() {
 
-    let msg = "bonjour";
-    alert(msg);
-}
-let ayoub = "ayoub";
-console.log(ayoub)
-let nom = prompt("donner votre nom"); //entrer le nom
-console.log(nom) //sortie du nom dans la console
+//     let msg = "bonjour";
+//     alert(msg);
+// }
+let x  = prompt("donner x"); 
+console.log(x) ;
+let y = prompt("donner y"); 
+console.log(y) ;
+
+let max = (parseInt(x) > parseInt(y))? x :  y ; //let max = (x>y)? x :  y ; 
+console.log(max);
+
+
+
+
