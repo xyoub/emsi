@@ -117,22 +117,62 @@ console.log(Math.min(n1,n2,n3,n4));
 }
 maxmin(prompt("donnez le nombre 1 "),prompt("donnez le nombre 2 "),prompt("donnez le nombre 3 "),prompt("donnez le nombre 3 "));
 */
-function aff(n1)
-{
-    // console.log("       0")
-    for( let i=0 ; i < 5 ; i++){
-        let ligne = ""
-        for( let o=0 ; o <=5-i ; o++){
-            ligne += " ";
+// function aff(n1)
+// {
+//     // console.log("       0")
+//     for( let i=0 ; i < 5 ; i++){
+//         let ligne = ""
+//         for( let o=0 ; o <=5-i ; o++){
+//             ligne += " ";
+//         }
+//         for( let j=0 ; j < i+1 ; j++){
+//             ligne += n1;
+//         }
+//         // ligne += "0";
+//         for( let j=0 ; j < i+1 ; j++){
+//             ligne += n1;
+//         }
+//         console.log(ligne);
+//     }
+// }
+// aff(prompt("donnez un nnn"))
+// ex obj 
+// let etudiant_1 = {nom : "aziz ahmed",
+// module : "JavaScript",
+// note : 18 };
+
+// function size (obj){
+//     let c = 0 ; 
+//     for (let _ in this ){
+//         c++; 
+//     } 
+//     return c ; 
+// }
+// console.log(etudiant_1)
+
+function etudiant(nom , module , note ) {
+    this.nom = nom;
+    this.module = module;
+    this.note = note;
+    this.exist = function(v){
+
+        for (let p in this )
+        {
+            if(p == v)
+            {
+                return true;
+                
+            }
+
         }
-        for( let j=0 ; j < i+1 ; j++){
-            ligne += n1;
-        }
-        // ligne += "0";
-        for( let j=0 ; j < i+1 ; j++){
-            ligne += n1;
-        }
-        console.log(ligne);
-    }
-}
-aff(prompt("donnez un nnn"))
+        return false;
+
+    };
+    };
+    
+    let etudiant_1 = new etudiant('aziz', 'js', 19);
+
+etudiant_1.age=30;
+
+console.log(etudiant_1.exist("age"));
+
