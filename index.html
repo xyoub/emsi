@@ -15,6 +15,75 @@
     <button id='zz'> afficher bonjour</button>
     <script src="lol.js"></script>
     <div></div>
+    <h4>/*1*/
+        function moyenne (array){
+            let sommeMoy = 0 ,
+                sommeCoef = 0 ;
+          
+            for (let i = 0; i < array.length; i++) {
+                sommeMoy  += array[i][0]*array[i][1] ;
+                sommeCoef += array[i][1] ; 
+            }
+            return sommeMoy / sommeCoef;
+          }
+          
+          
+          console.log(moyenne([[18,0.6],[12,0.4]]));
+          /*2*/
+          function Module(nom,note,coefficient){
+            this.nom = nom ;
+            this.note = note ;
+            if(coefficient <= 1 && coefficient >= 0 ){
+              this.coefficient = coefficient ;
+            }else{
+              this.coefficient = 0;
+          }}
+          
+          /*3*/  
+          function Etudiant(nom,age,modules){
+            this.nom = nom ;
+            this.age = age ;
+            this.modules = modules ;
+          }
+          
+          Etudiant.prototype.obtenirMoyenne = function(){
+            let sumNote = 0 ;
+            let sumCoef = 0 ;
+            for (const mod of this.modules) {
+              sumNote += mod.note * mod.coefficient;
+              sumCoef += mod.coefficient;
+            }
+            return sumNote/sumCoef ;
+          }
+          Etudiant.prototype.aEchouer= function(){
+            return this.obtenirMoyenne() < 10 ;
+          }
+          
+          
+          let et = new Etudiant("asd",21,
+                    [
+                      new Module("js",10,0.6),
+                      new Module("cpp",8,0.4)
+                    ]);
+           console.log( et.obtenirMoyenne());
+           console.log(et.aEchouer());
+        
+        </h4>
+        <h4>Etudiant.prototype.obtenirMin = function(){
+            let min = 0 ;
+            for (const mod of this.modules) {
+              if(min>mod.note){
+          min = mod.note ;
+          }
+            }
+          return min;
+          }
+        
+        
+          dir
+          let min = Infinity;
+        
+        </h4>
 </body>
 
 
